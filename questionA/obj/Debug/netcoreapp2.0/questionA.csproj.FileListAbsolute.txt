@@ -1,0 +1,4 @@
+C:\Users\rasmu\source\repos\Assignment3\questionA\obj\Debug\netcoreapp2.0\questionA.csprojResolveAssemblyReference.cache
+C:\Users\rasmu\source\repos\Assignment3\questionA\obj\Debug\netcoreapp2.0\questionA.csproj.CoreCompileInputs.cache
+C:\Users\rasmu\source\repos\Assignment3\questionA\obj\Debug\netcoreapp2.0\questionA.AssemblyInfoInputs.cache
+C:\Users\rasmu\source\repos\Assignment3\questionA\obj\Debug\netcoreapp2.0\questionA.AssemblyInfo.cs
