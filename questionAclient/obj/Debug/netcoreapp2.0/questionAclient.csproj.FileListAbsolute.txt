@@ -1,0 +1,11 @@
+C:\Users\rasmu\source\repos\Assignment3\questionAclient\bin\Debug\netcoreapp2.0\questionAclient.deps.json
+C:\Users\rasmu\source\repos\Assignment3\questionAclient\bin\Debug\netcoreapp2.0\questionAclient.runtimeconfig.json
+C:\Users\rasmu\source\repos\Assignment3\questionAclient\bin\Debug\netcoreapp2.0\questionAclient.runtimeconfig.dev.json
+C:\Users\rasmu\source\repos\Assignment3\questionAclient\bin\Debug\netcoreapp2.0\questionAclient.dll
+C:\Users\rasmu\source\repos\Assignment3\questionAclient\bin\Debug\netcoreapp2.0\questionAclient.pdb
+C:\Users\rasmu\source\repos\Assignment3\questionAclient\obj\Debug\netcoreapp2.0\questionAclient.csprojResolveAssemblyReference.cache
+C:\Users\rasmu\source\repos\Assignment3\questionAclient\obj\Debug\netcoreapp2.0\questionAclient.csproj.CoreCompileInputs.cache
+C:\Users\rasmu\source\repos\Assignment3\questionAclient\obj\Debug\netcoreapp2.0\questionAclient.AssemblyInfoInputs.cache
+C:\Users\rasmu\source\repos\Assignment3\questionAclient\obj\Debug\netcoreapp2.0\questionAclient.AssemblyInfo.cs
+C:\Users\rasmu\source\repos\Assignment3\questionAclient\obj\Debug\netcoreapp2.0\questionAclient.dll
+C:\Users\rasmu\source\repos\Assignment3\questionAclient\obj\Debug\netcoreapp2.0\questionAclient.pdb

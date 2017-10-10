@@ -1,0 +1,10 @@
+C:\Users\rasmu\source\repos\Assignment3\questionA\bin\Debug\netcoreapp2.0\questionAserver.deps.json
+C:\Users\rasmu\source\repos\Assignment3\questionA\bin\Debug\netcoreapp2.0\questionAserver.runtimeconfig.json
+C:\Users\rasmu\source\repos\Assignment3\questionA\bin\Debug\netcoreapp2.0\questionAserver.runtimeconfig.dev.json
+C:\Users\rasmu\source\repos\Assignment3\questionA\bin\Debug\netcoreapp2.0\questionAserver.dll
+C:\Users\rasmu\source\repos\Assignment3\questionA\bin\Debug\netcoreapp2.0\questionAserver.pdb
+C:\Users\rasmu\source\repos\Assignment3\questionA\obj\Debug\netcoreapp2.0\questionAserver.csproj.CoreCompileInputs.cache
+C:\Users\rasmu\source\repos\Assignment3\questionA\obj\Debug\netcoreapp2.0\questionAserver.AssemblyInfoInputs.cache
+C:\Users\rasmu\source\repos\Assignment3\questionA\obj\Debug\netcoreapp2.0\questionAserver.AssemblyInfo.cs
+C:\Users\rasmu\source\repos\Assignment3\questionA\obj\Debug\netcoreapp2.0\questionAserver.dll
+C:\Users\rasmu\source\repos\Assignment3\questionA\obj\Debug\netcoreapp2.0\questionAserver.pdb
