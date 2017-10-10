@@ -673,11 +673,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\rasmu\\source\\repos\\Assignment3\\questionA\\questionAserver.csproj",
-      "projectName": "questionAserver",
-      "projectPath": "C:\\Users\\rasmu\\source\\repos\\Assignment3\\questionA\\questionAserver.csproj",
+      "projectUniqueName": "C:\\Users\\rasmu\\source\\repos\\Assignment3\\questionAclient\\questionAclient.csproj",
+      "projectName": "questionAclient",
+      "projectPath": "C:\\Users\\rasmu\\source\\repos\\Assignment3\\questionAclient\\questionAclient.csproj",
       "packagesPath": "C:\\Users\\rasmu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rasmu\\source\\repos\\Assignment3\\questionA\\obj\\",
+      "outputPath": "C:\\Users\\rasmu\\source\\repos\\Assignment3\\questionAclient\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
