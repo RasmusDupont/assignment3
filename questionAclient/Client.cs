@@ -36,7 +36,7 @@ namespace questionA
                 int readStream = stream.Read(streamBytes, 0, 100);
 
                 for (int i = 0; i < readStream; i++) Console.Write(Convert.ToChar(streamBytes[i]));
-
+                Console.WriteLine("Client closing...");
                 client.Close();
             }
 

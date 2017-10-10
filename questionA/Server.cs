@@ -32,8 +32,9 @@ namespace questionA
                 sock.Send(encoding.GetBytes("Request received"));
                 Console.WriteLine("\nResponse sent");
 
+                Console.WriteLine("Socket closing...");
                 sock.Close();
-                listener.Stop();
+                //listener.Stop();
             }
             catch (Exception e)
             {

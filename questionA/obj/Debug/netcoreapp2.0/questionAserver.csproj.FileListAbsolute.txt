@@ -8,3 +8,4 @@ C:\Users\rasmu\source\repos\Assignment3\questionA\obj\Debug\netcoreapp2.0\questi
 C:\Users\rasmu\source\repos\Assignment3\questionA\obj\Debug\netcoreapp2.0\questionAserver.AssemblyInfo.cs
 C:\Users\rasmu\source\repos\Assignment3\questionA\obj\Debug\netcoreapp2.0\questionAserver.dll
 C:\Users\rasmu\source\repos\Assignment3\questionA\obj\Debug\netcoreapp2.0\questionAserver.pdb
+C:\Users\rasmu\source\repos\Assignment3\questionA\obj\Debug\netcoreapp2.0\questionAserver.csprojResolveAssemblyReference.cache
