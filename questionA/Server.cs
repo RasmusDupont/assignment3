@@ -24,9 +24,9 @@ namespace questionA
                 Console.WriteLine("Connection accepted from " + sock.RemoteEndPoint);
 
                 byte[] bytes = new byte[100];
-                int k = sock.Receive(bytes);
+                int numOfBytes = sock.Receive(bytes);
                 Console.WriteLine("Recieved a request...");
-                for (int i = 0; i < k; i++) Console.Write(Convert.ToChar(bytes[i]));
+                for (int i = 0; i < numOfBytes; i++) Console.Write(Convert.ToChar(bytes[i]));
 
                 ASCIIEncoding encoding = new ASCIIEncoding();
                 sock.Send(encoding.GetBytes("Request received"));
