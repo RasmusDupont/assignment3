@@ -66,8 +66,12 @@ namespace questionAserver
                 String s = request.Path.ToString();
                 if (!(request.Path != null)) return JsonConvert.SerializeObject(new Response("4 Bad Request"));
                 if (!(s.Any(Char.IsDigit))) return JsonConvert.SerializeObject(new Response("4 Bad Request"));
-
-                int id = Int32.Parse(request.Path.Substring(12));
+                s = string.Join("", s.ToCharArray().Where(Char.IsDigit));
+                int id = Int32.Parse(s);
+                if (CategoryList.GetCategory(id) == null)
+                {
+                    return JsonConvert.SerializeObject(new Response("5 not found"));
+                }
                 string body = JsonConvert.SerializeObject(CategoryList.GetCategory(id));
                 Response response = new Response("1 OK", body);
                 //convert to json
