@@ -38,7 +38,7 @@ namespace questionAserver
                     
                     int id = Int32.Parse(s);
                     string body = JsonConvert.SerializeObject(CategoryList.GetCategory(id));
-                    Response response = new Response("1 OK", body);
+                    Response response = new Response("1 Ok", body);
                     //convert to json
                     return JsonConvert.SerializeObject(response);
                 }
@@ -54,7 +54,7 @@ namespace questionAserver
                     Category cate = JsonConvert.DeserializeObject<Category>(request.Body);
                     CategoryList.Updatelist(id, cate.Name);
                     string body = JsonConvert.SerializeObject(CategoryList.GetCategory(id));
-                    Response response = new Response("1 OK", body);
+                    Response response = new Response("1 Ok", body);
                     //convert to json
                     return JsonConvert.SerializeObject(response);
                 }
@@ -73,7 +73,7 @@ namespace questionAserver
                     return JsonConvert.SerializeObject(new Response("5 not found"));
                 }
                 string body = JsonConvert.SerializeObject(CategoryList.GetCategory(id));
-                Response response = new Response("1 OK", body);
+                Response response = new Response("1 Ok", body);
                 //convert to json
                 return JsonConvert.SerializeObject(response);
             }
