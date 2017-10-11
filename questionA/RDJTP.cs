@@ -19,10 +19,13 @@ namespace questionAserver
             
             if (request.Method == "create")
 			{
-                if (!(request.Path == null)) return JsonConvert.SerializeObject(new Response("4 Bad Request"));
+                if (!(request.Path != null)) return JsonConvert.SerializeObject(new Response("4 Bad Request"));
                 
                     string body = request.Body;
                     Response response = new Response("2 created", body);
+                Category cate = JsonConvert.DeserializeObject<Category>(request.Body);
+
+                CategoryList.Getlist().Add(new Category(cate.Id,cate.Name));
                     //convert to json
                     return JsonConvert.SerializeObject(response);
                 
@@ -34,8 +37,7 @@ namespace questionAserver
                 if (request.Path.Contains("/categories/"))
                 {
                     string s = request.Path.ToString();
-                    s = string.Join("", s.ToCharArray().Where(Char.IsDigit));                
-                    
+                    s = string.Join("", s.ToCharArray().Where(Char.IsDigit));
                     int id = Int32.Parse(s);
                     string body = JsonConvert.SerializeObject(CategoryList.GetCategory(id));
                     Response response = new Response("1 Ok", body);
