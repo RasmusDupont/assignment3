@@ -1,0 +1,14 @@
+C:\Users\kaspe\Documents\GitHub\assignment3\Assignment3TestSuite\bin\Debug\netcoreapp2.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\kaspe\Documents\GitHub\assignment3\Assignment3TestSuite\bin\Debug\netcoreapp2.0\Assignment3TestSuite.deps.json
+C:\Users\kaspe\Documents\GitHub\assignment3\Assignment3TestSuite\bin\Debug\netcoreapp2.0\Assignment3TestSuite.runtimeconfig.json
+C:\Users\kaspe\Documents\GitHub\assignment3\Assignment3TestSuite\bin\Debug\netcoreapp2.0\Assignment3TestSuite.runtimeconfig.dev.json
+C:\Users\kaspe\Documents\GitHub\assignment3\Assignment3TestSuite\bin\Debug\netcoreapp2.0\Assignment3TestSuite.dll
+C:\Users\kaspe\Documents\GitHub\assignment3\Assignment3TestSuite\bin\Debug\netcoreapp2.0\Assignment3TestSuite.pdb
+C:\Users\kaspe\Documents\GitHub\assignment3\Assignment3TestSuite\obj\Debug\netcoreapp2.0\Assignment3TestSuite.csprojResolveAssemblyReference.cache
+C:\Users\kaspe\Documents\GitHub\assignment3\Assignment3TestSuite\obj\Debug\netcoreapp2.0\Assignment3TestSuite.csproj.CoreCompileInputs.cache
+C:\Users\kaspe\Documents\GitHub\assignment3\Assignment3TestSuite\obj\Debug\netcoreapp2.0\Assignment3TestSuite.AssemblyInfoInputs.cache
+C:\Users\kaspe\Documents\GitHub\assignment3\Assignment3TestSuite\obj\Debug\netcoreapp2.0\Assignment3TestSuite.AssemblyInfo.cs
+C:\Users\kaspe\Documents\GitHub\assignment3\Assignment3TestSuite\obj\Debug\netcoreapp2.0\Assignment3TestSuite.dll
+C:\Users\kaspe\Documents\GitHub\assignment3\Assignment3TestSuite\obj\Debug\netcoreapp2.0\Assignment3TestSuite.pdb
+C:\Users\kaspe\Documents\GitHub\assignment3\Assignment3TestSuite\bin\Debug\netcoreapp2.0\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\kaspe\Documents\GitHub\assignment3\Assignment3TestSuite\bin\Debug\netcoreapp2.0\xunit.runner.utility.netcoreapp10.dll
