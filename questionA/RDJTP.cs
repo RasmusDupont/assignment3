@@ -20,14 +20,23 @@ namespace questionAserver
             if (request.Method == "create")
 			{
                 if (!(request.Path != null)) return JsonConvert.SerializeObject(new Response("4 Bad Request"));
-                
-                    string body = request.Body;
-                    Response response = new Response("2 created", body);
                 Category cate = JsonConvert.DeserializeObject<Category>(request.Body);
+              
 
-                CategoryList.Getlist().Add(new Category(cate.Id,cate.Name));
-                    //convert to json
-                    return JsonConvert.SerializeObject(response);
+                
+                if (cate.Id <= 0)
+                {                  
+                    cate.Id = CategoryList.Getlist().Count + 1;
+                }
+                                    
+                
+                //convert to json
+               
+                string body = JsonConvert.SerializeObject(cate);
+                Response response = new Response("2 created", body);
+
+                CategoryList.Getlist().Add(new Category(cate.Id, cate.Name));
+                return JsonConvert.SerializeObject(response);
                 
             }
 
