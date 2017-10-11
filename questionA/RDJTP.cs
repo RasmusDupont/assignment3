@@ -1,26 +1,26 @@
 ﻿using System;
 using Newtonsoft.Json;
+using System.Linq;
+
 namespace questionAserver
 {
     public class RDJTP
     {
-        Categories categories;
+        
 
         public RDJTP()
         {
-            categories = new Categories();
+            
         }
 
-        public string Interpret(string input)
+        public string Interpret(Request request)
         {
+            if (!(request.Method != null)) return JsonConvert.SerializeObject(new Response("4 missing method"));
             
-            Request request = JsonConvert.DeserializeObject<Request>(input);
-
             if (request.Method == "create")
 			{
-               
-
-               
+                if (!(request.Path == null)) return JsonConvert.SerializeObject(new Response("4 Bad Request"));
+                
                     string body = request.Body;
                     Response response = new Response("2 created", body);
                     //convert to json
@@ -33,8 +33,11 @@ namespace questionAserver
                 //read single category by id
                 if (request.Path.Contains("/categories/"))
                 {
-                    int id = Int32.Parse(request.Path.Substring(12));
-                    string body = JsonConvert.SerializeObject(categories.GetCategory(id));
+                    string s = request.Path.ToString();
+                    s = string.Join("", s.ToCharArray().Where(Char.IsDigit));                
+                    
+                    int id = Int32.Parse(s);
+                    string body = JsonConvert.SerializeObject(CategoryList.GetCategory(id));
                     Response response = new Response("1 OK", body);
                     //convert to json
                     return JsonConvert.SerializeObject(response);
@@ -43,14 +46,37 @@ namespace questionAserver
 
             else if (request.Method == "update")
             {
-               //update functionality 
+                if (request.Path.Contains("/categories/"))
+                {
+                    string s = request.Path.ToString();
+                    s = string.Join("", s.ToCharArray().Where(Char.IsDigit));
+                    int id = Int32.Parse(s);
+                    Category cate = JsonConvert.DeserializeObject<Category>(request.Body);
+                    CategoryList.Updatelist(id, cate.Name);
+                    string body = JsonConvert.SerializeObject(CategoryList.GetCategory(id));
+                    Response response = new Response("1 OK", body);
+                    //convert to json
+                    return JsonConvert.SerializeObject(response);
+                }
+                return JsonConvert.SerializeObject(new Response("4 Bad Request"));
             }
 
 			else if (request.Method == "delete")
 			{
-				//delete functionality 
-			}
+                String s = request.Path.ToString();
+                if (!(request.Path != null)) return JsonConvert.SerializeObject(new Response("4 Bad Request"));
+                if (!(s.Any(Char.IsDigit))) return JsonConvert.SerializeObject(new Response("4 Bad Request"));
+
+                int id = Int32.Parse(request.Path.Substring(12));
+                string body = JsonConvert.SerializeObject(CategoryList.GetCategory(id));
+                Response response = new Response("1 OK", body);
+                //convert to json
+                return JsonConvert.SerializeObject(response);
+            }
+
             return JsonConvert.SerializeObject(new Response("4 Bad Request"));
         }
+          
+        }
     }
-}
+

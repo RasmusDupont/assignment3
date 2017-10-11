@@ -27,7 +27,7 @@ namespace Assignment3TestSuite
 
     public class Assignment3Tests
     {
-        private const int Port = 5000;
+        private const int Port = 5001;
 
 
         //////////////////////////////////////////////////////////
@@ -54,7 +54,7 @@ namespace Assignment3TestSuite
 
             var response = client.ReadResponse();
 
-            Assert.True(response.Status.ToLower().Contains("missing method"));
+            Assert.Contains("missing method", response.Status.ToLower());
         }
 
         [Fact]
@@ -109,7 +109,7 @@ namespace Assignment3TestSuite
 
             var response = client.ReadResponse();
 
-            Assert.True(response.Status.ToLower().Contains("missing date"));
+            Assert.Contains("missing date", response.Status.ToLower());
         }
 
         [Fact]

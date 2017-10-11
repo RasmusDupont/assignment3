@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
@@ -29,26 +30,21 @@ namespace questionAserver
                     Console.WriteLine("Listener endpoint: " + listener.LocalEndpoint);
                     Console.WriteLine("Waiting for a connection...");
 
-                    Socket sock = listener.AcceptSocket();
+                    var sock = listener.AcceptTcpClient();
 
 
                     Thread thread = new Thread(() =>
                     {
-                        Console.WriteLine("Connection accepted from " + sock.RemoteEndPoint);
-
-                        byte[] bytes = new byte[100];
-                        int numOfBytes = sock.Receive(bytes);
+                        Console.WriteLine("Connection accepted from " + sock.Client.RemoteEndPoint);                        
                         Console.WriteLine("Recieved a request...");
-
-                        string fromClient = "";
-                        for (int i = 0; i < numOfBytes; i++)
-                            fromClient  += Convert.ToChar(bytes[i]);
-                        Console.Write(fromClient);
-
-                        string toClient = protocol.Interpret(fromClient);
-
+                        
+                        var steam =sock.GetStream();
+                        var request = Read(steam, sock.ReceiveBufferSize);
+                        
+                       
+                        string toClient = protocol.Interpret(request);
                         ASCIIEncoding encoding = new ASCIIEncoding();
-                        sock.Send(encoding.GetBytes(toClient));
+                        sock.Client.Send(encoding.GetBytes(toClient));
                         Console.WriteLine("\nResponse sent");
 
                         Console.WriteLine("Socket closing...");
@@ -62,6 +58,15 @@ namespace questionAserver
                 catch (Exception e)
                 {
                     Console.WriteLine("Error: " + e.StackTrace);
+                }
+
+                Request Read(NetworkStream strm, int size)
+                {
+                    byte[] buffer = new byte[size];
+                    var bytesRead = strm.Read(buffer, 0, buffer.Length);
+                    var request = Encoding.UTF8.GetString(buffer, 0, bytesRead);
+                    Console.WriteLine($"Request: {JsonConvert.SerializeObject(request)}");
+                    return JsonConvert.DeserializeObject<Request>(request);
                 }
             }
 
