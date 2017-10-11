@@ -4,15 +4,18 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net.Sockets;
 using System.Text;
+using Newtonsoft.Json;
 
 namespace questionA
 {
     class Client
     {
-        private static int port = 5000;
+        private static int port = 5001;
 
         public static void Main()
         {
+
+            Request request = new Request("read", "/categories/1", "1122", "{}");
 
             try
             {
@@ -24,7 +27,8 @@ namespace questionA
                 Console.WriteLine("Connected");
                 Console.Write("Enter input: ");
 
-                String input = Console.ReadLine();
+                //String input = Console.ReadLine();
+                String input = JsonConvert.SerializeObject(request);
                 Stream stream = client.GetStream();
 
                 ASCIIEncoding encoding = new ASCIIEncoding();
@@ -45,5 +49,40 @@ namespace questionA
                 Console.WriteLine("Error: " + e.StackTrace);
             }
         }
+
+		public class Request
+		{
+
+			public Request(string method, string path, string date, string body)
+			{
+				Method = method;
+				Path = path;
+				Date = date;
+				Body = body;
+			}
+
+			public string Method
+			{
+				get;
+				set;
+			}
+			public string Path
+			{
+				get;
+				set;
+			}
+			public string Date
+
+			{
+				get;
+				set;
+			}
+			public string Body
+			{
+				get;
+				set;
+			}
+		}
+
     }
 }
