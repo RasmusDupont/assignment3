@@ -15,7 +15,7 @@ namespace questionA
         public static void Main()
         {
 
-            Request request = new Request("read", "/categories/1", "1122", "{}");
+            Request request = new Request("create", "/categories/1", "1122", "{name : da}");
 
             try
             {
@@ -38,9 +38,19 @@ namespace questionA
                 stream.Write(inputBytes, 0, inputBytes.Length);
                 byte[] streamBytes = new byte[100];
                 int readStream = stream.Read(streamBytes, 0, 100);
+               
 
-                for (int i = 0; i < readStream; i++) Console.Write(Convert.ToChar(streamBytes[i]));
+                string fromClient = "";
+                for (int i = 0; i < readStream; i++)
+                    fromClient += Convert.ToChar(streamBytes[i]);
+                fromClient = fromClient.Replace("\"" , "").Replace("\\", "");
+                Console.Write(fromClient);             
+
+                Console.ReadKey();
+
+                
                 Console.WriteLine("Client closing...");
+                Console.ReadKey();
                 client.Close();
             }
 

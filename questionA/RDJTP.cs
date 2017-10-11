@@ -18,8 +18,15 @@ namespace questionAserver
 
             if (request.Method == "create")
 			{
-				//create functionality 
-			}
+               
+
+               
+                    string body = request.Body;
+                    Response response = new Response("2 created", body);
+                    //convert to json
+                    return JsonConvert.SerializeObject(response);
+                
+            }
 
             else if (request.Method == "read")
             {

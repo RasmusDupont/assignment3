@@ -19,3 +19,14 @@ C:/Users/rasmu/source/repos/Assignment3/questionA/obj/Debug/netcoreapp2.0/questi
 /Users/kronstrand/Documents/RUC/RAWDATA/assignment3/questionA/obj/Debug/netcoreapp2.0/questionAserver.AssemblyInfo.cs
 /Users/kronstrand/Documents/RUC/RAWDATA/assignment3/questionA/obj/Debug/netcoreapp2.0/questionAserver.dll
 /Users/kronstrand/Documents/RUC/RAWDATA/assignment3/questionA/obj/Debug/netcoreapp2.0/questionAserver.pdb
+C:\Users\kaspe\Documents\GitHub\assignment3\questionA\bin\Debug\netcoreapp2.0\questionAserver.deps.json
+C:\Users\kaspe\Documents\GitHub\assignment3\questionA\bin\Debug\netcoreapp2.0\questionAserver.runtimeconfig.json
+C:\Users\kaspe\Documents\GitHub\assignment3\questionA\bin\Debug\netcoreapp2.0\questionAserver.runtimeconfig.dev.json
+C:\Users\kaspe\Documents\GitHub\assignment3\questionA\bin\Debug\netcoreapp2.0\questionAserver.dll
+C:\Users\kaspe\Documents\GitHub\assignment3\questionA\bin\Debug\netcoreapp2.0\questionAserver.pdb
+C:\Users\kaspe\Documents\GitHub\assignment3\questionA\obj\Debug\netcoreapp2.0\questionAserver.csproj.CoreCompileInputs.cache
+C:\Users\kaspe\Documents\GitHub\assignment3\questionA\obj\Debug\netcoreapp2.0\questionAserver.AssemblyInfoInputs.cache
+C:\Users\kaspe\Documents\GitHub\assignment3\questionA\obj\Debug\netcoreapp2.0\questionAserver.AssemblyInfo.cs
+C:\Users\kaspe\Documents\GitHub\assignment3\questionA\obj\Debug\netcoreapp2.0\questionAserver.dll
+C:\Users\kaspe\Documents\GitHub\assignment3\questionA\obj\Debug\netcoreapp2.0\questionAserver.pdb
+C:\Users\kaspe\Documents\GitHub\assignment3\questionA\obj\Debug\netcoreapp2.0\questionAserver.csprojResolveAssemblyReference.cache
