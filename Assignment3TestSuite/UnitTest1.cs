@@ -50,11 +50,20 @@ namespace Assignment3TestSuite
         {
             var client = Connect();
 
-            client.SendRequest("{}");
+            var request = new
+            {                
+                Path = "/api/categories/1",
+                Date = UnixTimestamp(),
+                Body = (new { cid = 1, name = "BeveragesTesting" }).ToJson()
+            };
+
+            client.SendRequest(request.ToJson());
+
+           
 
             var response = client.ReadResponse();
 
-            Assert.Contains("missing method", response.Status.ToLower());
+            Assert.Contains("4 missing method", response.Status.ToLower());
         }
 
         [Fact]
