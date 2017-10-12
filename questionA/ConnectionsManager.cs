@@ -39,16 +39,19 @@ namespace questionAserver
                         Console.WriteLine("Recieved a request...");
                         
                         var steam =sock.GetStream();
-                        var request = Read(steam, sock.ReceiveBufferSize);
-                        
-                       
-                        string toClient = protocol.Interpret(request);
-                        ASCIIEncoding encoding = new ASCIIEncoding();
-                        sock.Client.Send(encoding.GetBytes(toClient));
-                        Console.WriteLine("\nResponse sent");
+                        if (steam.DataAvailable) {
+                            var request = Read(steam, sock.ReceiveBufferSize);
 
+
+                            string toClient = protocol.Interpret(request);
+                            ASCIIEncoding encoding = new ASCIIEncoding();
+                            sock.Client.Send(encoding.GetBytes(toClient));
+                            Console.WriteLine("\nResponse sent");
+                        }
                         Console.WriteLine("Socket closing...");
                         sock.Close();
+                        
+                      
                     });
                     thread.Start();
 

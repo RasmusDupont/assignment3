@@ -38,14 +38,15 @@ namespace questionAserver
 
                 }
             }
+            if (!(request.Body != null) && !(request.Path != null)) return JsonConvert.SerializeObject(new Response("missing resource"));
+            if (!(request.Path != null)) return JsonConvert.SerializeObject(new Response("4 Bad Request"));
+            if (!(request.Path.Contains("categories") || request.Path.Contains("testing"))) return JsonConvert.SerializeObject(new Response("4 Bad Request"));
+           
 
-            if (!(request.Path.Contains("categories") || request.Path.Contains("testing"))) return JsonConvert.SerializeObject(new Response("4 Bad Request")); 
-
-            
             if (request.Method == "create")
             {
                 if (!(request.Body != null)) return JsonConvert.SerializeObject(new Response("missing body"));
-                if (!(request.Path != null)) return JsonConvert.SerializeObject(new Response("4 Bad Request"));
+                
                 Category cate = JsonConvert.DeserializeObject<Category>(request.Body);
                 if (cate.Name == null || cate.Name == "null" || cate.Name == "") { return JsonConvert.SerializeObject(new Response("4 Bad Request")); }
 
